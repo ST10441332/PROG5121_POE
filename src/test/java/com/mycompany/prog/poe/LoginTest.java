@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.util.*;
+//I used openAI.(2025).Claude3.7 sonnet(Helped me create and fix unit test )[https://chatgpt.com/c/6859109a-2734-8009-b79e-613d7f87216c]
 
 class LoginTest {
     private Login login;
@@ -64,3 +65,4 @@ class LoginTest {
         assertTrue(report.contains("Message"));
     }
 }
+//I used openAI.(2025).Claude3.7 sonnet(Fixed errors )[https://chatgpt.com/c/6859109a-2734-8009-b79e-613d7f87216c]

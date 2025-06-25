@@ -1,4 +1,5 @@
-// Full Java Messaging App with Required Arrays and Functionalities
+//I used openAI.(2025).Claude3.7 sonnet(Helped me add required Arrays)[https://chatgpt.com/c/6859109a-2734-8009-b79e-613d7f87216c]
+
 package com.mycompany.prog.poe;
 
 import javax.swing.*;
@@ -77,14 +78,8 @@ if (!accountCreated) {
     }
 }
 
-    loginUser();
-    if (isLoggedIn) {
-        JOptionPane.showMessageDialog(null, "Welcome " + firstName + " " + lastName);
-        JOptionPane.showMessageDialog(null, "Welcome to QuickChat");
-    } else {
-        JOptionPane.showMessageDialog(null, loginStatus); // show "Login failed" message
+
     
-}
 
             } else {
                 JOptionPane.showMessageDialog(null, "Exiting program. Goodbye!");
@@ -93,6 +88,7 @@ if (!accountCreated) {
         }
     }
     // ----- Helper Methods for Unit Testing -----
+//I used openAI.(2025).Claude3.7 sonnet(Helped me create and fix unit test )[https://chatgpt.com/c/6859109a-2734-8009-b79e-613d7f87216c]
 
 public void registerTestUser(String firstName, String lastName, String username, String password, String phone) {
     this.firstName = firstName;
@@ -227,12 +223,16 @@ public String computeMessageHash(String id, int index, String text) {
         String pass = JOptionPane.showInputDialog("Enter Password:");
 
         if (user.equals(registeredUsername) && pass.equals(registeredPassword)) {
-            loginStatus = "Login successful! Welcome " + firstName + " " + lastName;
-            isLoggedIn = true;
-            messageLimit = Integer.parseInt(JOptionPane.showInputDialog("Set message limit:"));
-            showMainMenu();
-        } else {
-            loginStatus = "Login failed.";
+    loginStatus = "Login successful!";
+    isLoggedIn = true;
+    JOptionPane.showMessageDialog(null, "Welcome " + firstName + " " + lastName);
+    JOptionPane.showMessageDialog(null, "Welcome to QuickChat");
+    messageLimit = Integer.parseInt(JOptionPane.showInputDialog("Set message limit:"));
+    showMainMenu();
+}
+ 
+        else {
+            loginStatus = "Login failed.Please check your username or password because it is invalid";
         }
     }
 
@@ -253,6 +253,8 @@ public String computeMessageHash(String id, int index, String text) {
             }
         }
     }
+    //I used openAI.(2025).Claude3.7 sonnet(Helped me fix the 3 option(send message,show message and quit)and the function and structure)[https://chatgpt.com/c/6859109a-2734-8009-b79e-613d7f87216c]
+
 
     public void sendMessage() {
         if (sentMessages.size() >= messageLimit) {
@@ -291,6 +293,7 @@ public String computeMessageHash(String id, int index, String text) {
                 break;
         }
     }
+//I used openAI.(2025).Claude3.7 sonnet(Helped me add functions and fix stucture)[https://chatgpt.com/c/6859109a-2734-8009-b79e-613d7f87216c]
 
     public void showMessageOptions() {
         StringBuilder sb = new StringBuilder("All Messages:\n\nSent:\n");
