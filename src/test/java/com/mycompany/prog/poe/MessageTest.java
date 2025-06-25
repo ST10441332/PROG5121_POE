@@ -104,5 +104,33 @@ public class MessageTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
+
+    /**
+     * Test of getSender method, of class Message.
+     */
+    @Test
+    public void testGetSender() {
+        System.out.println("getSender");
+        Message instance = null;
+        String expResult = "";
+        String result = instance.getSender();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getRecipient method, of class Message.
+     */
+    @Test
+    public void testGetRecipient() {
+        System.out.println("getRecipient");
+        Message instance = null;
+        String expResult = "";
+        String result = instance.getRecipient();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
     
 }
